@@ -1,0 +1,14 @@
+model {
+  phi_beta ~ dbeta(1, 1)
+  phi <- phi_beta*2 - 1
+  mu ~ dnorm(0, 1/10000)
+  sigma2 ~ dgamma(0.5, 0.5)
+  sigma <- sqrt(sigma2)
+
+  h[1] ~ dnorm(mu, (1-pow(phi, 2)) / sigma2)
+  y[1] ~ dnorm(0, exp(-h[1]))
+  for (i in 2:N) {
+    h[i] ~ dnorm(mu*(1-phi) + phi*h[i-1], 1/sigma2)
+    y[i] ~ dnorm(0, exp(-h[i]))
+  }
+}
