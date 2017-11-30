@@ -18,7 +18,7 @@ ret <- sim$y
 
 dat <- list(y = ret, N = length(ret))
 
-n.chains <- 3
+n.chains <- 1
 
 # JAGS centered
 jamodel.c <- jags.model("sv-c.bug", data = dat, n.chains = n.chains, n.adapt = 1000, inits = lapply(sample.int(.Machine$integer.max, n.chains), function (x) list(.RNG.seed = x, .RNG.name = "base::Wichmann-Hill")))
@@ -57,4 +57,5 @@ saveRDS(list(
   svfit.asis = svfit.asis
 ), filename)
 
-rm(list = ls())
+# Consistency with evaluate.R
+dat <- sim
