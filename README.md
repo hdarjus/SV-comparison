@@ -12,8 +12,6 @@ where, in order to be able to do Bayesian inference, one needs to put a prior di
 The R package `stochvol` uses several tricks to improve the sampling efficiency of the latent vector, most notably ASIS (ancillarity-sufficiency interweaving strategy) and AWOL (all without a loop).
 `Stan` is the state-of-the-art probabilistic programming language, and `JAGS` is a language for graphical models.
 
-The repository is still not finished, some summary about the conclusions will be added.
-
 References:
 - Kastner, Gregor. "Dealing with stochastic volatility in time series using the R package stochvol." Journal of Statistical software 69.5 (2016): 1-30.
 - McCausland, William J., Shirley Miller, and Denis Pelletier. "Simulation smoothing for state–space models: A computational efficiency analysis." Computational Statistics & Data Analysis 55.1 (2011): 199-212.
