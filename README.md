@@ -1,3 +1,5 @@
+Archived repo.
+
 # SV-comparison
 Comparison of different implementations of the same stochastic volatility model (`stochvol`, `JAGS`, `Stan`).
 The goal is to see when and why one needs to develop a model-specific algorithm even if fast prototyping is easy using existing software packages.
